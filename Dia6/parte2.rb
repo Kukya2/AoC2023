@@ -1,9 +1,5 @@
-# file = File.readlines('test.txt').map(&:strip).map{|c| c.split(':')[1].split.map(&:to_i)}
-file = File.readlines('input.txt').map(&:strip).map{|c| c.split(':')[1].split.map(&:to_i)}
-
-carreras = file[0].zip(file[1])
-
-pp carreras
+# carrera = File.readlines('test.txt').map(&:strip).map{|c| c.split(':')[1].split.join}.map(&:to_i)
+carrera = File.readlines('input.txt').map(&:strip).map{|c| c.split(':')[1].split.join}.map(&:to_i)
 
 def solveFormula(carrera)
     tmax, dist = carrera
@@ -24,8 +20,4 @@ def solveFormula(carrera)
     return (t1..t2).count
 end
 
-suma = 1
-carreras.each do |c|
-    suma *= solveFormula(c)
-end
-p suma
+p solveFormula(carrera)
