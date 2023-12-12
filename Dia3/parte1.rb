@@ -12,7 +12,7 @@ def findNumCoords(file, i, j)
         right += 1
     end
     # p [i,j], left, right
-    p file[i][left..right]
+    # p file[i][left..right]
     return [i,left,right]
 end
 
@@ -24,7 +24,7 @@ def adyacentes(file, i,j)
             next
         end
         #si es digito, encotrar coordenas de los digitos
-        pp [file[i + x][j + y], i,j, pair]
+        # pp [file[i + x][j + y], i,j, pair]
         if file[i + x][j + y].match?(/\d/)
             # pp file[i + x][j + y], findNumCoords(file,i+x,j+y)
             $num_coords.append(findNumCoords(file,i+x,j+y))
