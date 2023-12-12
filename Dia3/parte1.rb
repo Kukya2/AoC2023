@@ -1,4 +1,4 @@
-file = File.readlines('test.txt').map(&:strip)
+file = File.readlines('./Dia3/test.txt').map(&:strip)
 
 def findNumCoords(file, i, j)
     left, right = j,j
